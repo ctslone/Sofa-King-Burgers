@@ -10,11 +10,11 @@
             <h3>Not Devoured</h3>
             <ul>
                 {{#each burgers}}
-                    {{#unless devoured}}
-                    <li>
-                        {{burger_name}} 
-                    </li> 
-                    {{/unless}}
+                {{#unless devoured}}
+                <li>
+                    {{burger_name}}
+                </li>
+                {{/unless}}
                 {{/each}}
             </ul>
         </div>
@@ -25,9 +25,9 @@
                     <form class="form-inline">
                         <div class="form-group mx-sm-3 mb-2">
                             <label for="burgerInput" class="sr-only">Burger</label>
-                            <input type="password" class="form-control" id="burgerInput" placeholder="Burger">
+                            <input type="text" class="form-control" id="burgerInput" placeholder="Burger">
                         </div>
-                        <button type="submit" class="btn btn-primary mb-2">Add</button>
+                        <button type="submit" class="btn btn-primary mb-2 submit-btn">Add</button>
                     </form>
                 </div>
             </div>
@@ -36,11 +36,11 @@
             <h3>Devoured</h3>
             <ul>
                 {{#each burgers}}
-                    {{#if devoured}}
-                    <li>
-                        {{burger_name}} 
-                    </li> 
-                    {{/if}}
+                {{#if devoured}}
+                <li>
+                    {{burger_name}}
+                </li>
+                {{/if}}
                 {{/each}}
             </ul>
         </div>
