@@ -8,6 +8,15 @@
     <div class="row">
         <div class="col-4 text-center" id="notEaten">
             <h3>Not Devoured</h3>
+            <ul>
+                {{#each burgers}}
+                    {{#unless devoured}}
+                    <li>
+                        {{burger_name}} 
+                    </li> 
+                    {{/unless}}
+                {{/each}}
+            </ul>
         </div>
         <div class="col-4 text-center" id="entry">
             <h3>Entry Div</h3>
@@ -25,6 +34,15 @@
         </div>
         <div class="col-4 text-center" id="eaten">
             <h3>Devoured</h3>
+            <ul>
+                {{#each burgers}}
+                    {{#if devoured}}
+                    <li>
+                        {{burger_name}} 
+                    </li> 
+                    {{/if}}
+                {{/each}}
+            </ul>
         </div>
     </div>
 </div>

@@ -10,10 +10,8 @@ router.get('/', function(req, res) {
             burgers: data
         };
         console.log(burgerObj);
-        res.render('index')
+        res.render('index', burgerObj)
     })
-    // console.log("main")
-    // res.render('index')
 
 })
 
