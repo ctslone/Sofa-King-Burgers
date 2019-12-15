@@ -1,19 +1,30 @@
 <div class="container">
     <div class="row">
-        <div class="col-12">
-            <h1>Titile Div</h1>
+        <div class="col-12 text-center">
+            <h1>Sofa King Burgers</h1>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-4">
-            <h3>Not Eaten Div</h3>
+        <div class="col-4 text-center" id="notEaten">
+            <h3>Not Devoured</h3>
         </div>
-        <div class="col-4">
+        <div class="col-4 text-center" id="entry">
             <h3>Entry Div</h3>
+            <div class="row">
+                <div class="col-12">
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="burgerInput" class="sr-only">Burger</label>
+                            <input type="password" class="form-control" id="burgerInput" placeholder="Burger">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Add</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="col-4">
-            <h3>Eaten Div</h3>
+        <div class="col-4 text-center" id="eaten">
+            <h3>Devoured</h3>
         </div>
     </div>
 </div>
