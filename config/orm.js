@@ -41,30 +41,32 @@ var orm = {
         })
     },
 
-    insertOne: function (table, col, val, insertCallback) {
-        var queryString = "INSERT INTO " + table;
+    // insertOne: function (table, col, val, insertCallback) {
+    //     var queryString = "INSERT INTO " + table;
 
-        queryString += " (";
-        queryString += col.toString();
-        queryString += ") ";
-        queryString += "VALUES (";
-        queryString += printQuestionMarks(val.length);
-        queryString += ") ";
+    //     queryString += " (";
+    //     queryString += col.toString();
+    //     queryString += ") ";
+    //     queryString += "VALUES (";
+    //     queryString += printQuestionMarks(val.length);
+    //     queryString += ") ";
 
-        console.log(queryString)
+    //     console.log(queryString)
 
-        connection.query(queryString, val, function(err, result) {
-            if (err) {
-              throw err;
-            }
+    //     connection.query(queryString, val, function(err, result) {
+    //         if (err) {
+    //           throw err;
+    //         }
       
-            insertCallback(result);
-          });
-    },
+    //         insertCallback(result);
+    //       });
+    // },
 
-    updateOne: function () { }
+    // updateOne: function () { }
 
 }
+
+module.exports = orm;
 
 // NOTES
 /*

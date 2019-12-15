@@ -6,7 +6,7 @@ var connection = mysql.createConnection({
     port: 3306,
     user: "root",
     password: "Uncbootcamp1!",
-    database: "cat_db"
+    database: "sofaking_db"
   });
 // conencting to the DB
 connection.connect(function(err) {
