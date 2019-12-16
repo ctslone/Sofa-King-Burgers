@@ -27,7 +27,30 @@ $(document).on("click", "#add-btn", function(event) {
 
 $(document).on("click", "#devour-btn", function(event) {
     event.preventDefault();
-    var test = $(this).data("devour")
-    console.log(test)
+
+    var id = $(this).attr("data-burgerid")
+
+    $(this).attr("data-devour", 1)
+
+    console.log($(this).attr("data-devour"))
+
+    // $(this).attr("data-devour", 1)
+
+    
+    console.log("ID " +id)
+
+    var status = {
+        devoured: $(this).attr("data-devour")
+    }
+
+    $.ajax("/api/burgers/" + id, {
+        type: "PUT",
+        data: status
+    }).then(
+        function() {
+            console.log("eaten");
+            location.reload();
+        }
+    )
 })
 

@@ -53,16 +53,31 @@ var orm = {
 
         console.log(queryString)
 
-        connection.query(queryString, val, function(err, result) {
+        connection.query(queryString, val, function (err, result) {
             if (err) {
-              throw err;
+                throw err;
             }
-      
+
             insertCallback(result);
-          });
+        });
     },
 
-    // updateOne: function () { }
+    updateOne: function (table, devourStatus, condition, updateCallback) {
+        var queryString = "UPDATE " + table;
+
+        queryString += " SET ";
+        queryString += objToSql(devourStatus);
+        queryString += " WHERE ";
+        queryString += condition;
+
+        console.log(queryString);
+        connection.query(queryString, function (err, result) {
+            if (err) {
+                throw err;
+            }
+            updateCallback(result);
+        });
+    }
 
 }
 

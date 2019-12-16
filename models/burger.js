@@ -11,6 +11,12 @@ var burger = {
         orm.insertOne("burgers", col, val, function (res) {
             insertCallback(res);
         });
+    },
+
+    updateOne: function (devourStatus, conditon, updateCallback) {
+        orm.updateOne("burgers", devourStatus, conditon, function(res) {
+            updateCallback(res);
+        })
     }
 }
 
