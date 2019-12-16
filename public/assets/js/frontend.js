@@ -25,3 +25,9 @@ $(document).on("click", "#add-btn", function(event) {
       );
 })
 
+$(document).on("click", "#devour-btn", function(event) {
+    event.preventDefault();
+    var test = $(this).data("devour")
+    console.log(test)
+})
+
