@@ -1,9 +1,44 @@
+@font-face {
+    font-family: burger;
+    src: url(./frijole.regular.ttf)
+  }
+
+  @font-face {
+    font-family: body;
+    src: url(./body.ttf)
+  }
+
 body {
-    
+    background-color: #FFE8D1;
+}
+
+#title {
+    font-family: burger;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+#entry-row {
+    margin-bottom: 30px;
 }
 
 #notEaten, #entry, #eaten {
     border-color: black;
     border-width: 2px;
     border-style: solid;
+    border-radius: 20px;
+    font-family: body;
 }
+
+/* ul {
+    list-style-type: none;
+    
+} */
+
+/* li {
+    padding-left: -20px;
+} */

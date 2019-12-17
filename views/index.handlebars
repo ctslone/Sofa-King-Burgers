@@ -1,25 +1,15 @@
 <div class="container">
     <div class="row">
-        <div class="col-12 text-center">
+        <div id="title" class="col-12 text-center">
             <h1>Sofa King Burgers</h1>
+            <h3>"They're Sofa King Good!"</h3>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-4 text-center" id="notEaten">
-            <h3>Not Devoured</h3>
-            <ul>
-                {{#each burgers}}
-                {{#unless devoured}}
-                <li>
-                    {{burger_name}} <button data-burgerid="{{id}} "data-devour="{{devoured}}" id="devour-btn" class="btn btn-primary mb-2">Devour</button>
-                </li>
-                {{/unless}}
-                {{/each}}
-            </ul>
-        </div>
-        <div class="col-4 text-center" id="entry">
-            <h3>Entry Div</h3>
+    <div class="row" id="entry-row">
+        
+        <div class="col-4 text-center mx-auto" id="entry">
+            <h3>Enter Your Creation!</h3>
             <div class="row">
                 <div class="col-12">
                     <form class="form-inline">
@@ -27,12 +17,34 @@
                             {{!-- <label for="burgerInput" class="sr-only">Burger</label> --}}
                             <input type="text" class="form-control" id="burgerInput" placeholder="Burger">
                         </div>
-                        <button type="submit" id="add-btn" class="btn btn-primary mb-2">Add</button>
+                        <button type="submit" id="add-btn" class="btn-sm btn-primary mb-2">Add</button>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="col-4 text-center" id="eaten">
+
+        
+        
+    </div>
+    <div class="row">
+        <div class="col-4 text-center" id="notEaten">
+            <h3>Not Devoured</h3>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li>
+                    {{burger_name}} <button data-burgerid="{{id}} "data-devour="{{devoured}}" id="devour-btn" class="btn-sm btn-primary mb-2">Devour</button>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="col-4 img-fluid">
+            <img src="/assets/css/couch.png" class="img-fluid">
+        </div>
+
+        <div class="col-4 text-center ml-auto" id="eaten">
             <h3>Devoured</h3>
             <ul>
                 {{#each burgers}}
