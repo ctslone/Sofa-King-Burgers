@@ -8,8 +8,8 @@
 
     <div class="row" id="entry-row">
         
-        <div class="col-4 text-center mx-auto" id="entry">
-            <h3>Enter Your Creation!</h3>
+        <div class="col-4 mx-auto" id="entry">
+            <h3 class="text-center">Enter Your Creation!</h3>
             <div class="row">
                 <div class="col-12">
                     <form class="form-inline">
@@ -27,8 +27,8 @@
         
     </div>
     <div class="row">
-        <div class="col-4 text-center" id="notEaten">
-            <h3>Not Devoured</h3>
+        <div class="col-4" id="notEaten">
+            <h3 class="text-center">Not Devoured</h3>
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
@@ -44,8 +44,8 @@
             <img src="/assets/css/couch.png" class="img-fluid">
         </div>
 
-        <div class="col-4 text-center ml-auto" id="eaten">
-            <h3>Devoured</h3>
+        <div class="col-4 ml-auto" id="eaten">
+            <h3 class="text-center">Devoured</h3>
             <ul>
                 {{#each burgers}}
                 {{#if devoured}}
